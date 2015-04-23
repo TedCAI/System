@@ -1,6 +1,6 @@
 class ActiclesController < ApplicationController
   before_action :set_acticle, only: [:show, :edit, :update, :destroy]
-
+  require 'mechanize'
   # GET /acticles
   # GET /acticles.json
   def index
@@ -59,6 +59,24 @@ class ActiclesController < ApplicationController
       format.html { redirect_to acticles_url, notice: 'Acticle was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def search
+	#p params[:search]
+	industryId = nil
+	if params[:search].nil?
+		industryId = "i257"
+	else
+		industryId = Acticle.searchActicle(params[:search])
+	end
+
+	agent = Mechanize::new
+	page = agent.get("http://api.beta.dowjones.com/api/public/2.0/Content/Headlines/json?SearchString=(in=#{industryId}%20and%20ns=NFCPIN%20and%20rst=(TMNB%20or%20TNWP%20or%20TFCP%20or%20i257)%20and%20wc%3E700)%20or%20ns=REQRPH&searchmode=Traditional&Records=10&DeDuplicationLevel=NearExact&LanguageCode=en&SortBy=DisplayDateTime&SortOrder=Descending&encryptedToken=S00ZGV71GFm0TEnMXmnOHmnNDIvN9avODQt5DByWa3WNpFHRcqmVEVkTVFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEA")
+	@tempResult = []
+	tResult = JSON.load(page.body)["Headlines"]
+	tResult.each do |r|
+		@tempResult.push(r["Title"].first["Items"].first["Value"])
+	end
   end
 
   private

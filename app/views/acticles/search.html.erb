@@ -1,0 +1,26 @@
+<h1>Search Page</h1>
+<%= form_tag search_acticles_path, :method => 'get' do %>
+<p>
+Industry ID:
+<%= text_field_tag :search, params[:search] %>
+ie: 2015-02-23
+</p>
+<p>
+<%= submit_tag "Search", :name => nil %>
+</p>
+<% end %>
+<table>
+ <thead>
+  <tr>
+   <th>Title</th>
+  </tr>
+ </thead>
+
+ <tbody>
+<% @tempResult.each do |result| %>
+   <tr>
+	<td><%= result %></td>
+   </tr>
+<% end %>
+  </tbody>
+</table>
