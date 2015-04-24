@@ -73,9 +73,21 @@ class ActiclesController < ApplicationController
 	agent = Mechanize::new
 	page = agent.get("http://api.beta.dowjones.com/api/public/2.0/Content/Headlines/json?SearchString=(in=#{industryId}%20and%20ns=NFCPIN%20and%20rst=(TMNB%20or%20TNWP%20or%20TFCP%20or%20i257)%20and%20wc%3E700)%20or%20ns=REQRPH&searchmode=Traditional&Records=10&DeDuplicationLevel=NearExact&LanguageCode=en&SortBy=DisplayDateTime&SortOrder=Descending&encryptedToken=S00ZGV71GFm0TEnMXmnOHmnNDIvN9avODQt5DByWa3WNpFHRcqmVEVkTVFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEA")
 	@tempResult = []
+	@tempShortAc = []
 	tResult = JSON.load(page.body)["Headlines"]
 	tResult.each do |r|
-		@tempResult.push(r["Title"].first["Items"].first["Value"])
+		tRes = r["Title"].first["Items"].first["Value"]
+		loop do
+			startIndex = tRes.index('<')
+			endIndex = tRes.index('>')
+			if startIndex.nil? or endIndex.nil?
+				break
+			end
+			tRes.slice! tRes[startIndex..endIndex]
+		end
+		@tempResult.push(tRes)
+		@tempShortAc.push(r["Snippet"]["Items"].first["Value"])
+#		@tempResult.push(r)
 	end
   end
 

@@ -586,3 +586,529 @@ Started GET "/assets/results.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde
 
 
 Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2015-04-23 17:52:45 +0100
+
+
+Started GET "/data" for 127.0.0.1 at 2015-04-24 13:42:33 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (52.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/data"):
+  actionpack (4.2.1.rc3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1.rc3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1.rc3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1.rc3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1.rc3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1.rc3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1.rc3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1.rc3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1.rc3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1.rc3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1.rc3) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1.rc3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1.rc3) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/yunxuan/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/yunxuan/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/yunxuan/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (73.3ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (36.5ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (190.8ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (25.6ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (132.6ms)
+
+
+Started GET "/acticles" for 127.0.0.1 at 2015-04-24 13:42:38 +0100
+Processing by ActiclesController#index as HTML
+  [1m[35mActicle Load (31.8ms)[0m  SELECT "acticles".* FROM "acticles"
+  Rendered acticles/index.html.erb within layouts/application (36.9ms)
+Completed 200 OK in 427ms (Views: 377.8ms | ActiveRecord: 33.0ms)
+
+
+Started GET "/acticles/search" for 127.0.0.1 at 2015-04-24 13:42:46 +0100
+Processing by ActiclesController#search as HTML
+  Rendered acticles/search.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 1702ms (Views: 94.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/acticles/search" for 127.0.0.1 at 2015-04-24 13:54:07 +0100
+Processing by ActiclesController#search as HTML
+  Rendered acticles/search.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 1038ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/acticles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 13:54:08 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-04-24 13:54:08 +0100
+
+
+Started GET "/assets/results.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 13:54:08 +0100
+
+
+Started GET "/assets/scaffolds.self-c5c6901d03b94a8c1230050598befbdd116b59fdd4ae0eff14dcbbdc37ce1d98.css?body=1" for 127.0.0.1 at 2015-04-24 13:54:08 +0100
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-04-24 13:54:08 +0100
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-04-24 13:54:08 +0100
+
+
+Started GET "/assets/acticles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 13:54:08 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-04-24 13:54:08 +0100
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2015-04-24 13:54:08 +0100
+
+
+Started GET "/assets/results.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 13:54:08 +0100
+
+
+Started GET "/acticles/search" for 127.0.0.1 at 2015-04-24 13:56:05 +0100
+Processing by ActiclesController#search as HTML
+  Rendered acticles/search.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 1267ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    21: <% @tempResult.each do |result| %>
+    22:    <tr>
+    23: 	<td><%= result["Title"].first["Items"].first["Value"] %></td>
+    24: 	<td><%= result["Snippet"].first["Items"].first["Value"] %></td>
+    25:    </tr>
+    26: <% end %>
+    27:   </tbody>
+  app/views/acticles/search.html.erb:24:in `[]'
+  app/views/acticles/search.html.erb:24:in `block in _app_views_acticles_search_html_erb___48146293912739233_69880715204660'
+  app/views/acticles/search.html.erb:21:in `each'
+  app/views/acticles/search.html.erb:21:in `_app_views_acticles_search_html_erb___48146293912739233_69880715204660'
+
+
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.2ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (28.2ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (70.3ms)
+
+
+Started GET "/acticles/search" for 127.0.0.1 at 2015-04-24 13:57:10 +0100
+Processing by ActiclesController#search as HTML
+  Rendered acticles/search.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 2045ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/acticles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 13:57:12 +0100
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-04-24 13:57:12 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-04-24 13:57:12 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-04-24 13:57:12 +0100
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-04-24 13:57:12 +0100
+
+
+Started GET "/assets/scaffolds.self-c5c6901d03b94a8c1230050598befbdd116b59fdd4ae0eff14dcbbdc37ce1d98.css?body=1" for 127.0.0.1 at 2015-04-24 13:57:12 +0100
+
+
+Started GET "/assets/results.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 13:57:12 +0100
+
+
+Started GET "/assets/acticles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 13:57:12 +0100
+
+
+Started GET "/assets/results.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 13:57:12 +0100
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2015-04-24 13:57:12 +0100
+
+
+Started GET "/acticles/search" for 127.0.0.1 at 2015-04-24 13:57:55 +0100
+Processing by ActiclesController#search as HTML
+  Rendered acticles/search.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1812ms (Views: 61.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/acticles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 13:57:57 +0100
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-04-24 13:57:57 +0100
+
+
+Started GET "/assets/results.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 13:57:57 +0100
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-04-24 13:57:57 +0100
+
+
+Started GET "/assets/scaffolds.self-c5c6901d03b94a8c1230050598befbdd116b59fdd4ae0eff14dcbbdc37ce1d98.css?body=1" for 127.0.0.1 at 2015-04-24 13:57:57 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-04-24 13:57:57 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-04-24 13:57:57 +0100
+
+
+Started GET "/assets/acticles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 13:57:57 +0100
+
+
+Started GET "/assets/results.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 13:57:57 +0100
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2015-04-24 13:57:57 +0100
+
+
+Started GET "/acticles/search" for 127.0.0.1 at 2015-04-24 13:58:16 +0100
+Processing by ActiclesController#search as HTML
+  Rendered acticles/search.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 1295ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    21: <% @tempResult.each do |result| %>
+    22:    <tr>
+    23: 	<td><%= result["Title"].first["Items"].first["Value"] %></td>
+    24: 	<td><%= result["Snippet"]["Items"]["Value"] %></td>
+    25:    </tr>
+    26: <% end %>
+    27:   </tbody>
+  app/views/acticles/search.html.erb:24:in `[]'
+  app/views/acticles/search.html.erb:24:in `block in _app_views_acticles_search_html_erb___48146293912739233_69880562851900'
+  app/views/acticles/search.html.erb:21:in `each'
+  app/views/acticles/search.html.erb:21:in `_app_views_acticles_search_html_erb___48146293912739233_69880562851900'
+
+
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.4ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (19.9ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (42.7ms)
+
+
+Started GET "/acticles/search" for 127.0.0.1 at 2015-04-24 13:58:41 +0100
+Processing by ActiclesController#search as HTML
+  Rendered acticles/search.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 1064ms (Views: 72.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/acticles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 13:58:42 +0100
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-04-24 13:58:42 +0100
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-04-24 13:58:42 +0100
+
+
+Started GET "/assets/results.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 13:58:42 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-04-24 13:58:42 +0100
+
+
+Started GET "/assets/scaffolds.self-c5c6901d03b94a8c1230050598befbdd116b59fdd4ae0eff14dcbbdc37ce1d98.css?body=1" for 127.0.0.1 at 2015-04-24 13:58:42 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-04-24 13:58:42 +0100
+
+
+Started GET "/assets/acticles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 13:58:42 +0100
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2015-04-24 13:58:42 +0100
+
+
+Started GET "/assets/results.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 13:58:42 +0100
+
+
+Started GET "/acticles/search" for 127.0.0.1 at 2015-04-24 13:59:03 +0100
+Processing by ActiclesController#search as HTML
+  Rendered acticles/search.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1262ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/acticles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 13:59:04 +0100
+
+
+Started GET "/assets/scaffolds.self-c5c6901d03b94a8c1230050598befbdd116b59fdd4ae0eff14dcbbdc37ce1d98.css?body=1" for 127.0.0.1 at 2015-04-24 13:59:04 +0100
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-04-24 13:59:04 +0100
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-04-24 13:59:04 +0100
+
+
+Started GET "/assets/results.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 13:59:04 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-04-24 13:59:04 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-04-24 13:59:04 +0100
+
+
+Started GET "/assets/results.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 13:59:04 +0100
+
+
+Started GET "/assets/acticles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 13:59:04 +0100
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2015-04-24 13:59:04 +0100
+
+
+Started GET "/acticles/search" for 127.0.0.1 at 2015-04-24 14:23:35 +0100
+Processing by ActiclesController#search as HTML
+Completed 500 Internal Server Error in 841ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/acticles_controller.rb:80:in `block in search'
+  app/controllers/acticles_controller.rb:78:in `each'
+  app/controllers/acticles_controller.rb:78:in `search'
+
+
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.2ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (20.9ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.2ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (48.6ms)
+
+
+Started GET "/acticles/search" for 127.0.0.1 at 2015-04-24 14:24:08 +0100
+Processing by ActiclesController#search as HTML
+Completed 500 Internal Server Error in 1233ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `first' for nil:NilClass):
+  app/controllers/acticles_controller.rb:80:in `block in search'
+  app/controllers/acticles_controller.rb:78:in `each'
+  app/controllers/acticles_controller.rb:78:in `search'
+
+
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.2ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (23.1ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (48.2ms)
+
+
+Started GET "/acticles/search" for 127.0.0.1 at 2015-04-24 14:24:36 +0100
+Processing by ActiclesController#search as HTML
+Completed 500 Internal Server Error in 984ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `puch' for []:Array):
+  app/controllers/acticles_controller.rb:80:in `block in search'
+  app/controllers/acticles_controller.rb:78:in `each'
+  app/controllers/acticles_controller.rb:78:in `search'
+
+
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.4ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (4.5ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (32.0ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (66.3ms)
+
+
+Started GET "/acticles/search" for 127.0.0.1 at 2015-04-24 14:24:47 +0100
+Processing by ActiclesController#search as HTML
+  Rendered acticles/search.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 1310ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/acticles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 14:24:49 +0100
+
+
+Started GET "/assets/results.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 14:24:49 +0100
+
+
+Started GET "/assets/scaffolds.self-c5c6901d03b94a8c1230050598befbdd116b59fdd4ae0eff14dcbbdc37ce1d98.css?body=1" for 127.0.0.1 at 2015-04-24 14:24:49 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-04-24 14:24:49 +0100
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-04-24 14:24:49 +0100
+
+
+Started GET "/assets/acticles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 14:24:49 +0100
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-04-24 14:24:49 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-04-24 14:24:49 +0100
+
+
+Started GET "/assets/results.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 14:24:49 +0100
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2015-04-24 14:24:49 +0100
+
+
+Started GET "/acticles/search" for 127.0.0.1 at 2015-04-24 14:26:16 +0100
+Processing by ActiclesController#search as HTML
+  Rendered acticles/search.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1084ms (Views: 78.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/acticles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 14:26:17 +0100
+
+
+Started GET "/assets/results.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 14:26:17 +0100
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-04-24 14:26:17 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-04-24 14:26:17 +0100
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-04-24 14:26:17 +0100
+
+
+Started GET "/assets/scaffolds.self-c5c6901d03b94a8c1230050598befbdd116b59fdd4ae0eff14dcbbdc37ce1d98.css?body=1" for 127.0.0.1 at 2015-04-24 14:26:17 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-04-24 14:26:17 +0100
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2015-04-24 14:26:17 +0100
+
+
+Started GET "/assets/results.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 14:26:17 +0100
+
+
+Started GET "/assets/acticles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 14:26:17 +0100
+
+
+Started GET "/acticles/search?utf8=%E2%9C%93&search=i0" for 127.0.0.1 at 2015-04-24 14:26:25 +0100
+Processing by ActiclesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"i0"}
+  Rendered acticles/search.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 923ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/acticles/search?utf8=%E2%9C%93&search=i0" for 127.0.0.1 at 2015-04-24 14:41:53 +0100
+Processing by ActiclesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"i0"}
+Completed 500 Internal Server Error in 2677ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `s' for #<ActiclesController:0x00000004563b10>):
+  app/controllers/acticles_controller.rb:86:in `block (2 levels) in search'
+  app/controllers/acticles_controller.rb:80:in `loop'
+  app/controllers/acticles_controller.rb:80:in `block in search'
+  app/controllers/acticles_controller.rb:78:in `each'
+  app/controllers/acticles_controller.rb:78:in `search'
+
+
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.6ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (23.8ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/yunxuan/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (51.0ms)
+
+
+Started GET "/acticles/search?utf8=%E2%9C%93&search=i0" for 127.0.0.1 at 2015-04-24 14:42:17 +0100
+Processing by ActiclesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"i0"}
+  Rendered acticles/search.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 1199ms (Views: 93.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/acticles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 14:42:19 +0100
+
+
+Started GET "/assets/results.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 14:42:19 +0100
+
+
+Started GET "/assets/scaffolds.self-c5c6901d03b94a8c1230050598befbdd116b59fdd4ae0eff14dcbbdc37ce1d98.css?body=1" for 127.0.0.1 at 2015-04-24 14:42:19 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-04-24 14:42:19 +0100
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-04-24 14:42:19 +0100
+
+
+Started GET "/assets/acticles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 14:42:19 +0100
+
+
+Started GET "/assets/results.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 14:42:19 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-04-24 14:42:19 +0100
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-04-24 14:42:19 +0100
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2015-04-24 14:42:19 +0100
+
+
+Started GET "/acticles/search?utf8=%E2%9C%93&search=i426" for 127.0.0.1 at 2015-04-24 14:42:46 +0100
+Processing by ActiclesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"i426"}
+  Rendered acticles/search.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 1600ms (Views: 82.5ms | ActiveRecord: 0.0ms)
